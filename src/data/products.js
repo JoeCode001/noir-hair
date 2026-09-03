@@ -1,0 +1,356 @@
+const img = (id, w = 1200) =>
+  `https://images.unsplash.com/photo-${id}?auto=format&fit=crop&w=${w}&q=80`;
+
+export const IMAGES = {
+  hero: img("1649312555826-e42566d05d15", 1600),
+  wigDisplay: img("1634315775834-3e1ac73de6b6"),
+  silhouette: img("1620213679404-95e1796f2415"),
+  conditioner: img("1758544518111-53274094598e"),
+  curlyClose: img("1759865775535-7e4e3d2bbf3a"),
+  images1: img("4i9ef6xU738"),
+};
+
+export const products = [
+  {
+    id: "silk-bundle-deep-wave",
+    name: "Silk Bundle — Deep Wave",
+    category: "Bundles",
+    price: 145,
+    length: '18" · single bundle',
+    texture: "Deep wave, 100% remy human hair",
+    origin: "Ethically sourced, single-donor",
+    image: IMAGES.hero,
+    description:
+      "Single-donor remy hair in a deep wave pattern that holds through wash after wash. Cuticles run in one direction, so it never tangles or matts at the root.",
+    details: [
+      "100% remy human hair, single donor",
+      "Holds curl through 3+ washes",
+      "Double-wefted for fuller ends",
+    ],
+  },
+  {
+    id: "lace-front-natural",
+    name: "Lace Front — Natural Curl",
+    category: "Wigs",
+    price: 320,
+    length: '20" · full wig',
+    texture: "Natural curl, HD lace",
+    origin: "Ethically sourced, single-donor",
+    image: IMAGES.wigDisplay,
+    description:
+      "A 13x4 HD lace front built on a breathable cap, pre-plucked with baby hair for a natural hairline that reads convincingly from any angle.",
+    details: [
+      "13x4 HD lace, pre-plucked hairline",
+      "Adjustable strap and combs",
+      "Bleached knots included",
+    ],
+  },
+  {
+    id: "silhouette-closure",
+    name: "5x5 Closure — Straight",
+    category: "Closures",
+    price: 98,
+    length: '16" · closure',
+    texture: "Bone straight",
+    origin: "Ethically sourced, single-donor",
+    image: IMAGES.silhouette,
+    description:
+      "A 5x5 free-part closure in bone-straight texture, giving a seamless part without the commitment or cost of a full frontal install.",
+    details: [
+      "5x5 free-part closure",
+      "Matches bundle textures exactly",
+      "Pre-bleached knots",
+    ],
+  },
+  {
+    id: "kinky-curly-bundle",
+    name: "Silk Bundle — Kinky Curly",
+    category: "Bundles",
+    price: 152,
+    length: '16" · single bundle',
+    texture: "Kinky curly, 100% remy human hair",
+    origin: "Ethically sourced, single-donor",
+    image: IMAGES.curlyClose,
+    description:
+      "A tight, springy kinky curl built to blend seamlessly with natural 4A–4C textures, install-ready straight out of the pack.",
+    details: [
+      "Blends with natural 4A–4C hair",
+      "Minimal shedding, double-wefted",
+      "Install-ready, no pre-styling needed",
+    ],
+  },
+  {
+    id: "frontal-body-wave",
+    name: "13x4 Frontal — Body Wave",
+    category: "Wigs",
+    price: 210,
+    length: '20" · frontal piece',
+    texture: "Body wave",
+    origin: "Ethically sourced, single-donor",
+    image: IMAGES.hero,
+    description:
+      "A full 13x4 frontal in a soft body wave, giving versatile parting from ear to ear and a natural fall that moves like natural hair.",
+    details: [
+      "Ear-to-ear parting space",
+      "Bleached knots, plucked hairline",
+      "Pairs with our body wave bundles",
+    ],
+  },
+  {
+    id: "care-kit",
+    name: "Wig Care Essentials Kit",
+    category: "Care",
+    price: 44,
+    length: "4-piece kit",
+    texture: "For all textures",
+    origin: "Formulated for install-safe use",
+    image: IMAGES.conditioner,
+    description:
+      "Sulphate-free shampoo, leave-in conditioner, edge control and a satin bag — everything an install needs between salon visits.",
+    details: [
+      "Sulphate and paraben free",
+      "Safe for coloured and lace hair",
+      "Includes satin storage bag",
+    ],
+  },
+  {
+    id: "silk-bundle-straight",
+    name: "Silk Bundle — Bone Straight",
+    category: "Bundles",
+    price: 138,
+    length: '20" · single bundle',
+    texture: "Bone straight, 100% remy human hair",
+    origin: "Ethically sourced, single-donor",
+    image: IMAGES.silhouette,
+    description:
+      "Sleek, single-donor bone-straight hair with a natural shine that doesn't look synthetic — holds a silk press without reverting.",
+    details: [
+      "100% remy human hair, single donor",
+      "Holds a silk press",
+      "Double-wefted for fuller ends",
+    ],
+  },
+  {
+    id: "full-lace-wig",
+    name: "Full Lace Wig — Loose Wave",
+    category: "Wigs",
+    price: 380,
+    length: '22" · full wig',
+    texture: "Loose wave, full lace",
+    origin: "Ethically sourced, single-donor",
+    image: IMAGES.wigDisplay,
+    description:
+      "360-degree parting freedom on a breathable full lace cap, built for styles that need to come up, back, or into a sleek bun.",
+    details: [
+      "360° parting freedom",
+      "Breathable full lace cap",
+      "Pre-plucked, bleached knots",
+    ],
+  },
+  {
+    id: "frontal-closure-curly",
+    name: "13x4 Frontal — Kinky Curly",
+    category: "Closures",
+    price: 165,
+    length: '18" · frontal piece',
+    texture: "Kinky curly",
+    origin: "Ethically sourced, single-donor",
+    image: IMAGES.curlyClose,
+    description:
+      "A frontal piece in kinky curl, built to blend with natural textures for a seamless install without a visible break at the hairline.",
+    details: [
+      "Ear-to-ear parting space",
+      "Blends with 4A–4C natural hair",
+      "Bleached knots included",
+    ],
+  },
+  {
+    id: "silk-press-spray",
+    name: "Heat Protectant & Shine Spray",
+    category: "Care",
+    price: 22,
+    length: "150ml bottle",
+    texture: "For all textures",
+    origin: "Formulated for install-safe use",
+    image: IMAGES.conditioner,
+    description:
+      "A lightweight, non-greasy spray that protects up to 230°C and leaves a glass-like shine without weighing strands down.",
+    details: [
+      "Heat protection to 230°C",
+      "Non-greasy, lightweight formula",
+      "Safe for coloured hair",
+    ],
+  },
+  {
+    id: "silk-bundle-body-wave",
+    name: "Silk Bundle — Body Wave",
+    category: "Bundles",
+    price: 148,
+    length: '20" · single bundle',
+    texture: "Body wave, 100% remy human hair",
+    origin: "Ethically sourced, single-donor",
+    image: IMAGES.hero,
+    description:
+      "A soft, loose body wave that moves naturally and blends easily with relaxed or silk-pressed natural hair for an undetectable install.",
+    details: [
+      "100% remy human hair, single donor",
+      "Blends with relaxed natural hair",
+      "Double-wefted for fuller ends",
+    ],
+  },
+  {
+    id: "hd-lace-closure",
+    name: "4x4 HD Closure — Wavy",
+    category: "Closures",
+    price: 112,
+    length: '16" · closure',
+    texture: "Loose wavy, HD lace",
+    origin: "Ethically sourced, single-donor",
+    image: IMAGES.silhouette,
+    description:
+      "A 4x4 HD lace closure that melts into the scalp for a seamless part, in a soft wavy texture that matches our body wave bundles.",
+    details: [
+      "HD lace melts into scalp",
+      "4x4 free-part sizing",
+      "Matches body wave bundles",
+    ],
+  },
+  {
+    id: "u-part-wig",
+    name: "U-Part Wig — Natural Curl",
+    category: "Wigs",
+    price: 265,
+    length: '18" · U-part wig',
+    texture: "Natural curl",
+    origin: "Ethically sourced, single-donor",
+    image: IMAGES.curlyClose,
+    description:
+      "A quick-install U-part wig that blends your own leave-out with a matching curl pattern, no lace glue or plucking required.",
+    details: [
+      "No lace glue required",
+      "Blends with your leave-out",
+      "Adjustable combs and strap",
+    ],
+  },
+  {
+    id: "edge-control",
+    name: "Melt Edge Control",
+    category: "Care",
+    price: 14,
+    length: "80g jar",
+    texture: "For all textures",
+    origin: "Formulated for install-safe use",
+    image: IMAGES.wigDisplay,
+    description:
+      "A firm-hold, non-flaking edge control that lays baby hairs flat without the white residue or stiffness of gel-based formulas.",
+    details: [
+      "Firm hold, no white residue",
+      "Non-flaking once dry",
+      "Safe for daily use",
+    ],
+  },
+  {
+    id: "silk-bundle-loose-wave",
+    name: "Silk Bundle — Loose Wave",
+    category: "Bundles",
+    price: 149,
+    length: '22" · single bundle',
+    texture: "Loose wave, 100% remy human hair",
+    origin: "Ethically sourced, single-donor",
+    image: IMAGES.silhouette,
+    description:
+      "A relaxed, beachy loose wave with movement that holds through humidity, popular for both protective installs and half-up styling.",
+    details: [
+      "100% remy human hair, single donor",
+      "Holds through humidity",
+      "Double-wefted for fuller ends",
+    ],
+  },
+  {
+    id: "lace-front-straight",
+    name: "Lace Front — Bone Straight",
+    category: "Wigs",
+    price: 310,
+    length: '24" · full wig',
+    texture: "Bone straight, HD lace",
+    origin: "Ethically sourced, single-donor",
+    image: IMAGES.hero,
+    description:
+      "A sleek 13x4 HD lace front in bone-straight texture, pre-plucked and bleached for a natural hairline straight out of the box.",
+    details: [
+      "13x4 HD lace, pre-plucked hairline",
+      "Bone-straight, glass-like shine",
+      "Adjustable straps and combs",
+    ],
+  },
+  {
+    id: "closure-kinky-straight",
+    name: "5x5 Closure — Kinky Straight",
+    category: "Closures",
+    price: 105,
+    length: '18" · closure',
+    texture: "Kinky straight",
+    origin: "Ethically sourced, single-donor",
+    image: IMAGES.curlyClose,
+    description:
+      "A textured kinky-straight closure built to blend with natural hair that's been blown out but not silk-pressed fully smooth.",
+    details: [
+      "5x5 free-part closure",
+      "Blends with blown-out natural hair",
+      "Pre-bleached knots",
+    ],
+  },
+  {
+    id: "satin-bonnet",
+    name: "Satin Sleep Bonnet",
+    category: "Care",
+    price: 12,
+    length: "One size",
+    texture: "For all textures",
+    origin: "Formulated for install-safe use",
+    image: IMAGES.conditioner,
+    description:
+      "A double-lined satin bonnet with an elastic band that stays put overnight, protecting installs and natural hair from friction damage.",
+    details: [
+      "Double-lined satin interior",
+      "Elastic band, stays put overnight",
+      "Reduces friction and frizz",
+    ],
+  },
+  {
+    id: "silk-bundle-jerry-curl",
+    name: "Silk Bundle — Jerry Curl",
+    category: "Bundles",
+    price: 155,
+    length: '14" · single bundle',
+    texture: "Jerry curl, 100% remy human hair",
+    origin: "Ethically sourced, single-donor",
+    image: IMAGES.wigDisplay,
+    description:
+      "A bouncy, defined jerry curl with a springy bounce-back, popular for wash-and-go installs that need minimal daily styling.",
+    details: [
+      "100% remy human hair, single donor",
+      "Springy bounce-back curl",
+      "Minimal daily styling needed",
+    ],
+  },
+  {
+    id: "leave-in-conditioner",
+    name: "Silk Leave-In Conditioner",
+    category: "Care",
+    price: 19,
+    length: "200ml bottle",
+    texture: "For all textures",
+    origin: "Formulated for install-safe use",
+    image: IMAGES.conditioner,
+    description:
+      "A lightweight leave-in that detangles without weighing hair down, safe to use on both natural hair and installs between wash days.",
+    details: [
+      "Lightweight, non-greasy formula",
+      "Detangles without residue",
+      "Safe for natural hair and installs",
+    ],
+  },
+];
+
+export const getProduct = (id) => products.find((p) => p.id === id);
